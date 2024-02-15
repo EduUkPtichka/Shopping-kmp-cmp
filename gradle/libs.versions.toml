@@ -17,6 +17,10 @@ compose-plugin = "1.5.12"
 junit = "4.13.2"
 kotlin = "1.9.21"
 
+#Cocoapods
+native-cocoapods = "1.9.21"
+#Skie
+skie = "0.6.1"
 #kodein
 kodein = "7.21.2"
 #presentation
@@ -56,8 +60,6 @@ compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview"
 # Multiplatform Setting
 multiplatform-settings = { module = "com.russhwolf:multiplatform-settings", version.ref = "multiplatform-setting" }
 multiplatform-settings-coroutines = { module = "com.russhwolf:multiplatform-settings-coroutines", version.ref = "multiplatform-setting" }
-
-
 
 # Jetbrains
 kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinx-serialization" }
@@ -108,3 +110,5 @@ jetbrainsCompose = { id = "org.jetbrains.compose", version.ref = "compose-plugin
 kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
 kotlinx-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 sqlDelight = { id = "app.cash.sqldelight", version.ref = "sqlDelight" }
+cocoapods-native-kotlin = { id = "org.jetbrains.kotlin.native.cocoapods", version.ref = "native-cocoapods"}
+skie = { id = "co.touchlab.skie", version.ref = "skie" }
