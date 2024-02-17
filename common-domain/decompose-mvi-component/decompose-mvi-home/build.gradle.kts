@@ -35,6 +35,7 @@ kotlin {
             // Kodein-Di
             implementation(libs.kodein.di)
 
+            project(":common-model")
 
         }
 

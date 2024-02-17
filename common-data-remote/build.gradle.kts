@@ -25,11 +25,19 @@ kotlin {
             implementation(libs.kotlinx.serialization.json)
             implementation(libs.ktor.client.content.negotiation)
 
+            // Arrow-kt
+            implementation(libs.arrow.kt.core)
+            implementation(libs.arrow.kt.fx.coroutines)
+
             // Multiplatform Setting
             implementation(libs.multiplatform.settings)
             implementation(libs.multiplatform.settings.coroutines)
 
+            // Kodein: Di
             implementation(libs.kodein.di)
+
+            /* --- Project --- */
+            implementation(project(":common-entities"))
         }
 
         androidMain.dependencies {

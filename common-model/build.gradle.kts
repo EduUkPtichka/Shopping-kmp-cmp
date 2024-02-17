@@ -1,10 +1,28 @@
+import org.jetbrains.kotlin.config.ExplicitApiMode
+
 plugins{
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.cocoapods.native.kotlin)
     alias(libs.plugins.skie)
+    alias(libs.plugins.kotlinx.serialization)
 }
 
 kotlin {
+
+    /* --- Explicit API ---*/
+
+    // convenience methods
+    explicitApi()
+    // or
+    explicitApiWarning()
+
+    // setting level explicitly
+    explicitApi = org.jetbrains.kotlin.gradle.dsl.ExplicitApiMode.Strict
+    // or
+    explicitApi = org.jetbrains.kotlin.gradle.dsl.ExplicitApiMode.Warning
+
+    /* --------------------*/
+
     iosX64()
     iosArm64()
     iosSimulatorArm64()
@@ -12,8 +30,7 @@ kotlin {
     sourceSets {
 
         commonMain.dependencies {
-//        implementation(libs.kotlinx.coroutines.core)
-//        implementation(libs.skie.annotations)
+        implementation(libs.skie.annotations)
         }
     }
 

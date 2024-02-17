@@ -43,6 +43,11 @@ ktor = "2.3.8"
 # Multiplatform
 multiplatform-setting = "1.1.1"
 
+# Arrow-kt
+arrow-kt = "1.2.0"
+
+detekt="1.23.4"
+
 [libraries]
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
 kotlin-test-junit = { module = "org.jetbrains.kotlin:kotlin-test-junit", version.ref = "kotlin" }
@@ -57,9 +62,14 @@ androidx-activity-compose = { module = "androidx.activity:activity-compose", ver
 compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "compose" }
 compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "compose" }
 
+detekt-gradlePlugin = { group = "io.gitlab.arturbosch.detekt", name = "detekt-gradle-plugin", version.ref = "detekt" }
+
 # Multiplatform Setting
 multiplatform-settings = { module = "com.russhwolf:multiplatform-settings", version.ref = "multiplatform-setting" }
 multiplatform-settings-coroutines = { module = "com.russhwolf:multiplatform-settings-coroutines", version.ref = "multiplatform-setting" }
+
+# Skie
+skie-annotations = { module = "co.touchlab.skie:configuration-annotations", version.ref = "skie" }
 
 # Jetbrains
 kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinx-serialization" }
@@ -72,7 +82,9 @@ ktor-client-okhttp = { module = "io.ktor:ktor-client-okhttp", version.ref = "kto
 ktor-client-darwin = { module = "io.ktor:ktor-client-darwin", version.ref = "ktor" }
 ktor-client-content-negotiation = { module = "io.ktor:ktor-client-content-negotiation", version.ref = "ktor" }
 ktor-client-logging = { module = "io.ktor:ktor-client-logging", version.ref = "ktor" }
-
+# Arrow-kt
+arrow-kt-core = { module = "io.arrow-kt:arrow-core", version.ref = "arrow-kt" }
+arrow-kt-fx-coroutines = { module = "io.arrow-kt:arrow-fx-coroutines", version.ref = "arrow-kt" }
 
 # Kodein: Di
 kodein-di = { module = "org.kodein.di:kodein-di", version.ref = "kodein" }
@@ -88,7 +100,6 @@ arkivanov-mvikotlin-extensions-coroutines = { module = "com.arkivanov.mvikotlin:
 # Decompose
 # Автор говорит что после 3.0.0 данный артефат содержит те двое. Но я их все ровно оставил до окончания проекта.
 arkivanov-decompose-extension-compose = { module = "com.arkivanov.decompose:extensions-compose", version.ref = "arkivanov-decompose" }
-
 arkivanov-decompose = { module = "com.arkivanov.decompose:decompose", version.ref = "arkivanov-decompose" }
 arkivanov-decompose-extensions-compose = { module = "com.arkivanov.decompose:extensions-compose", version.ref = "arkivanov-decompose" }
 

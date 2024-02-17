@@ -32,7 +32,7 @@ kotlin {
 }
 
 android {
-    namespace = "common.data.remote"
+    namespace = "common.entities.layer"
 
     compileSdk = (findProperty("android.compileSdk") as String).toInt()
 
