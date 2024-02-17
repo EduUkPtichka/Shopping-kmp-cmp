@@ -1,10 +1,26 @@
 plugins {
+    id("detekt-convention")
+
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.androidLibrary)
     alias(libs.plugins.kotlinx.serialization)
 }
 
 kotlin {
+
+    /* --- Explicit API ---*/
+
+    // convenience methods
+    explicitApi()
+    // or
+    explicitApiWarning()
+
+    // setting level explicitly
+    explicitApi = org.jetbrains.kotlin.gradle.dsl.ExplicitApiMode.Strict
+    // or
+    explicitApi = org.jetbrains.kotlin.gradle.dsl.ExplicitApiMode.Warning
+
+    /* --------------------*/
 
     androidTarget {
         compilations.all {

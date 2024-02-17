@@ -1,6 +1,8 @@
 import org.jetbrains.kotlin.config.ExplicitApiMode
 
 plugins{
+    id("detekt-convention")
+
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.cocoapods.native.kotlin)
     alias(libs.plugins.skie)

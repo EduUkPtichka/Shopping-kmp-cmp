@@ -1,5 +1,7 @@
-//rootProject.name = "Shopping-kmp-cmp"
+rootProject.name = "Shopping-kmp-cmp"
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
+
+includeBuild("build-logic")
 
 pluginManagement {
     repositories {
@@ -17,8 +19,6 @@ dependencyResolutionManagement {
         maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
     }
 }
-
-includeBuild("build-logic")
 
 /* ----Common Base----*/
 include("common-base")

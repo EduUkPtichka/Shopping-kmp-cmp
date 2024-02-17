@@ -1,9 +1,25 @@
 plugins {
+    id("detekt-convention")
+
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.androidLibrary)
 }
 
 kotlin {
+
+    /* --- Explicit API ---*/
+
+    // convenience methods
+    explicitApi()
+    // or
+    explicitApiWarning()
+
+    // setting level explicitly
+    explicitApi = org.jetbrains.kotlin.gradle.dsl.ExplicitApiMode.Strict
+    // or
+    explicitApi = org.jetbrains.kotlin.gradle.dsl.ExplicitApiMode.Warning
+
+    /* --------------------*/
 
     /* Настройте target-ы:
      * https://kotlinlang.org/docs/multiplatform-set-up-targets.html?utm_campaign=set-up-targets&utm_medium=kgp&utm_source=warnings

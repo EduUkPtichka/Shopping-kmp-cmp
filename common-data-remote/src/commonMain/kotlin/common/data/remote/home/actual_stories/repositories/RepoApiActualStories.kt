@@ -6,7 +6,3 @@ interface RepoApiActualStories {
 
     suspend fun getListItemActualStories(): List<EntitiActualStoriesMenu>
 }
-
-value class Salary(val value: Double) {
-    operator fun compareTo(other: Salary): Int = value.compareTo(other.value)
-}

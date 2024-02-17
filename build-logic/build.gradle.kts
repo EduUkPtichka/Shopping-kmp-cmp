@@ -9,6 +9,7 @@ repositories {
 }
 
 dependencies {
-//    compileOnly(libs.detekt.gradlePlugin)
+    api(libs.detekt.gradle)
 }
+
 
