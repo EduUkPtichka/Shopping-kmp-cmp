@@ -34,10 +34,10 @@ kotlin {
 android {
     namespace = "common.entities.layer"
 
-    compileSdk = (findProperty("android.compileSdk") as String).toInt()
+    compileSdk = 34
 
     defaultConfig {
-        minSdk = (findProperty("android.minSdk") as String).toInt()
+        minSdk = 24
     }
 
     compileOptions {

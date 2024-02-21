@@ -1,6 +1,4 @@
 plugins {
-    id("detekt-convention")
-
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.androidLibrary)
 }
@@ -24,6 +22,7 @@ kotlin {
     /* Настройте target-ы:
      * https://kotlinlang.org/docs/multiplatform-set-up-targets.html?utm_campaign=set-up-targets&utm_medium=kgp&utm_source=warnings
      */
+
     androidTarget {
         compilations.all {
             kotlinOptions {
@@ -35,24 +34,24 @@ kotlin {
     sourceSets {
         commonMain.dependencies {
 
-            //Jetbrains
+            // Jetbrains
             implementation(libs.kotlinx.coroutines.core)
 
-            //Mvi
+            // Mvi
             implementation(libs.arkivanov.mvikotlin)
             implementation(libs.arkivanov.mvikotlin.main)
             implementation(libs.arkivanov.mvikotlin.extensions.coroutines)
             implementation(libs.arkivanov.mvikotlin.logging)
             implementation(libs.arkivanov.mvikotlin.timetravel)
 
-            //Decompose
+            // Decompose
             implementation(libs.arkivanov.decompose.extension.compose)
 
             // Kodein-Di
             implementation(libs.kodein.di)
 
-            project(":common-model")
-
+            implementation(project(":common-data-remote"))
+            implementation(project(":common-model"))
         }
 
     }
@@ -67,10 +66,10 @@ kotlin {
 android {
     namespace = "common.decompose_mvi.logic_layer"
 
-    compileSdk = (findProperty("android.compileSdk") as String).toInt()
+    compileSdk = 34
 
     defaultConfig {
-        minSdk = (findProperty("android.minSdk") as String).toInt()
+        minSdk = 24
     }
 
     compileOptions {

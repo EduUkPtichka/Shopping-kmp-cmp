@@ -2,7 +2,7 @@ package common.data.remote.home.actual_stories.repositories
 
 import common.entities.layer.home.EntitiActualStoriesMenu
 
-interface RepoApiActualStories {
+public interface RepoApiActualStories {
 
-    suspend fun getListItemActualStories(): List<EntitiActualStoriesMenu>
+    public suspend fun getListItemActualStoriesMenu(): List<EntitiActualStoriesMenu>
 }

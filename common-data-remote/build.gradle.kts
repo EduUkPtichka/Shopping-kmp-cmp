@@ -1,6 +1,4 @@
 plugins {
-    id("detekt-convention")
-
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.androidLibrary)
     alias(libs.plugins.kotlinx.serialization)
@@ -72,16 +70,14 @@ kotlin {
 android {
     namespace = "common.data.remote"
 
-    compileSdk = (findProperty("android.compileSdk") as String).toInt()
+    compileSdk = 34
 
     defaultConfig {
-        minSdk = (findProperty("android.minSdk") as String).toInt()
+        minSdk = 24
     }
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
     }
-
-    sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
 }

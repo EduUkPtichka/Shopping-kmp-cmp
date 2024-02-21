@@ -1,7 +1,4 @@
 rootProject.name = "Shopping-kmp-cmp"
-enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
-
-includeBuild("build-logic")
 
 pluginManagement {
     repositories {

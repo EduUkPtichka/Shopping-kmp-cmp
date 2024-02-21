@@ -45,10 +45,10 @@ kotlin {
 android {
     namespace = "common.compose.ui"
 
-    compileSdk = (findProperty("android.compileSdk") as String).toInt()
+    compileSdk = 34
 
     defaultConfig {
-        minSdk = (findProperty("android.minSdk") as String).toInt()
+        minSdk = 24
     }
 
     buildFeatures {

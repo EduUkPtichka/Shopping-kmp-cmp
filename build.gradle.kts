@@ -6,10 +6,3 @@ plugins {
     alias(libs.plugins.cocoapods.native.kotlin) apply false
     alias(libs.plugins.skie) apply false
 }
-
-buildscript {
-    dependencies {
-        classpath(":build-logic")
-
-    }
-}

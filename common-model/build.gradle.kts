@@ -1,11 +1,6 @@
-import org.jetbrains.kotlin.config.ExplicitApiMode
-
-plugins{
-    id("detekt-convention")
-
+plugins {
     alias(libs.plugins.kotlinMultiplatform)
-    alias(libs.plugins.cocoapods.native.kotlin)
-    alias(libs.plugins.skie)
+    alias(libs.plugins.androidLibrary)
     alias(libs.plugins.kotlinx.serialization)
 }
 
@@ -25,23 +20,33 @@ kotlin {
 
     /* --------------------*/
 
-    iosX64()
-    iosArm64()
-    iosSimulatorArm64()
+    androidTarget {
+        compilations.all {
+            kotlinOptions {
+                jvmTarget = "17"
+            }
+        }
+    }
 
     sourceSets {
 
         commonMain.dependencies {
-        implementation(libs.skie.annotations)
+
         }
     }
+}
 
-    cocoapods {
-        version = "1.0"
+android {
+    namespace = "common.model.layer"
 
+    compileSdk = 34
 
-        summary = "SKIE Demo Project"
-        homepage = "https://github.com/touchlab/SKIEDemo"
-        ios.deploymentTarget = "14"
+    defaultConfig {
+        minSdk = 24
+    }
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
 }
